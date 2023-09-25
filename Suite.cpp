@@ -6,10 +6,9 @@ using namespace std;
 
 #include "Suite.h"
 
-Suite::Suite(float su0, float sun, unsigned int sn) {
+Suite::Suite(float su0, float sun) {
     u0 = su0;
     un = sun;
-    n = sn;
 }
 
 Suite::~Suite() {
@@ -24,9 +23,6 @@ float Suite::get_un() const {
     return un;
 }
 
-unsigned int Suite::get_n() const {
-    return n;
-}
 
 void Suite::set_u0(float su0) {
     u0 = su0;
@@ -36,6 +32,10 @@ void Suite::set_un(float sun) {
     un = sun;
 }
 
-void Suite::set_n(unsigned int sn) {
-    n = sn;
+void Suite::afficher_terme(unsigned int n) {
+    un = u0;
+    for(int i = 0; i < n; i++) {
+        un = un/2 - 2;
+    }
+    cout << "Le terme de rang " << n << " est " << un << endl;
 }

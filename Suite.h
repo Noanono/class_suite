@@ -13,14 +13,17 @@ private:
     unsigned int n;
 
 public:
-    Suite(float =0, float = 0, unsigned int = 0);
+    Suite(float =0, float = 0);
     ~Suite();
+    /*  Role    : Afficher un terme de la suite
+    Entrees : 1 entier
+    Sortie  : vide
+     */
+    void afficher_terme(unsigned int);
     float get_u0() const;
     float get_un() const;
-    unsigned int get_n() const;
     void set_u0(float);
     void set_un(float);
-    void set_n(unsigned int);
 
 
 };
