@@ -10,7 +10,6 @@ class Suite {
 private:
     float u0;
     float un;
-    unsigned int n;
 
 public:
     Suite(float =0, float = 0);
